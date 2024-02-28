@@ -1,85 +1,93 @@
 .App {
   align-items: center;
-    justify-content: center;
-    display: flex;
-  }
-  
-  .main {
-    background-color: red;
-    width: 50%;
-    /* height: 100vh; */
-    background-image: linear-gradient(#fffffe, #fffbd4, #fff8aa);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-  }
-  
-  .logodiv {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-  }
-  
-  .hero {
-    display: flex;
-    align-self: start;
-    width: 100%;
-    height: 53vh;
-    margin-top: 5px;
-  }
-  
-  .img1 {
-    width: 30%;
-    padding-left: 2px;
-  
-  }
-  
-  .content {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    width: 68%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .content h5 {
-    padding-left: 20px;
-    font-size: 8px;
-    font-weight: bold;
-    margin: 0;
-    align-items: start;
-  }
-  
-  .content ul {
-    font-size: 8.5px;
-    line-height: 9.5px;
-  }
-  
-  .content img {
-    display: block;
-    width: 95%;
-    margin-left: auto;
-    padding: 0;
-  }
-  
-  .content p {
-    font-size: 8.5px;
-    margin-left: 2px;
-  }
-  
-  .text {
-    font-size: 8px;
-    font-weight: 650;
-    padding: 10px;
-    margin-right: auto;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  /* Stack items vertically */
+}
+
+.main {
+  background-color: red;
+  background-image: linear-gradient(#fffffe, #fffbd4, #fff8aa);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  /* Full width initially */
+  max-width: 900px;
+  /* Limit max width for larger screens */
+  padding: 10px;
+  /* Add some padding */
+}
+
+.logodiv {
+  display: flex;
+  align-items: center;
+}
+
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+.hero {
+  display: flex;
+  width: 100%;
+  height: auto;
+  /* Adjust height based on content */
+  margin-top: 5px;
+}
+
+.img1 {
+  width: 30%;
+  padding-left: 2px;
+  max-width: 300px;
+
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  width: 68%;
+  margin: 0;
+  padding: 0;
+}
+
+.content h5 {
+  padding-left: 20px;
+  font-size: 10px;
+  font-weight: bold;
+  margin: 0;
+  align-items: start;
+}
+
+.content ul {
+  font-size: 10px;
+  line-height: 10px;
+}
+
+.content img {
+  display: block;
+  width: 95%;
+  margin-left: auto;
+  padding: 0;
+}
+
+.content p {
+  font-size: 10.8px;
+  margin-left: 2px;
+}
+
+.text {
+  font-size: 9.5px;
+  font-weight: 650;
+  padding: 10px;
+  margin-right: auto;
 }
 
 .product {
@@ -90,9 +98,10 @@
 .products {
   margin: 0;
   padding: 0;
-  font-size: 8.5px;
+  font-size: .7rem;
   font-weight: 650;
 }
+
 hr {
   border-top: 1px solid red;
   width: 95%;
@@ -102,31 +111,33 @@ hr {
   width: 95%;
   display: flex;
   gap: 2px;
-    font-size: 8px;
+  font-size: 8px;
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .row1 {
-    display: flex;
-  }
-  
-  .row2 {
-    display: flex;
-  }
-  
-  .row1 span {
-    padding-left: 2px;
-    padding-right: 2px;
-    font-weight: 600;
-  }
-  
-  .row2 span {
-    padding-left: 2px;
-    padding-right: 2px;
-    font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.row1 {
+  display: flex;
+}
+
+.row2 {
+  display: flex;
+}
+
+.row1 span {
+  font-size: .6rem;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-weight: 600;
+}
+
+.row2 span {
+  font-size: .6rem;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-weight: 600;
 }
 
 .vl {
@@ -137,17 +148,19 @@ hr {
 
 .footer {
   display: flex;
-  height: 10vh;
+  height: 9vh;
   background-color: #ec3237;
   width: 98%;
   justify-content: space-around;
-  margin-bottom: 8px;
+ 
 }
+
 .call {
   display: flex;
   color: white;
   font-size: .63rem;
 }
+
 .iconcall {
   background-color: white;
   border-radius: 100%;
@@ -159,4 +172,48 @@ hr {
   border-radius: 100%;
   margin-top: 15px;
   ;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    /* Stack elements on smaller screens */
+  }
+  .logo{
+    width: 70%;
+  }
+  .hero {
+    flex-direction: column;
+    /* Stack hero content vertically */
+  }
+  .products{
+    font-size: 7px;
+  }
+  .row1 span {
+    font-size: .4rem;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-weight: 600;
+  }
+  .row2 span {
+    font-size: .4rem;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-weight: 600;
+  }
+  .call {
+    font-size: .52rem;
+  }
+  .img1{
+    width: 100%; /* Full width on smaller screens */
+    max-height: 400px; 
+    padding-left: 30px;
+  }
+  .content {
+    width: 100%;
+    /* Full width on smaller screens */
+    max-width: none;
+    /* Remove max width constraint */
+  }
 }

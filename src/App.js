@@ -19,7 +19,6 @@ function App() {
 
           <div className="content">
             <h5>
-              {" "}
               C.R.I. PUMPS WINS THE NATIONAL ENERGY CONSERVATION AWARD 2018 for
               the 4th time.
             </h5>
@@ -38,7 +37,7 @@ function App() {
             </ul>
             <img src={Img2} alt="heroImage" />
             <p>
-              Government of India has awarded the{" "}
+              Government of India has awarded the
               <b>"National Energy Conservation Award 2018"</b> . Mr. G.
               Selvaraj, Joint Managing Director of C.R.I. Group received the
               award from Smt. Sumitra Mahajan, Speaker of Lok Sabha & Shri. Raj
